@@ -34,6 +34,7 @@ def deploy(request):
         form = forms.deployVmForm(request.POST)
         if form.is_valid():
             vm_name = form.cleaned_data['VM_name']
+            vm_name = request.user.username[:7] + "_" + vm_name
             os_type = form.cleaned_data['OS_type']
             connect_test(vm_name,os_type)
             #form.cleaned_data process
