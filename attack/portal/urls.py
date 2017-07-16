@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^redirect/$', views.redirect, name='redirect'),
     url(r'^vmlist/$', views.vmlist, name='vmlist'),
     url(r'^deploy/$', views.deploy, name='deploy'),
+    url(r'^complete_deploy/$', views.completeDeploy, name='complete_deploy'),
     url(
         r'^login/$', 
         auth_views.login, 

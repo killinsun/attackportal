@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.http  import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from . import forms
+from portal.lib.test_module import sayInputData
 
 
 def mainpage(request):
@@ -28,8 +30,25 @@ def vmlist(request):
 
 @login_required
 def deploy(request):
-    return render(request, 'portal/deploy.html', {})
+    if request.method == 'POST':
+        form = forms.deployVmForm(request.POST)
+        if form.is_valid():
+            vm_name = form.cleaned_data['VM_name']
+            os_type = form.cleaned_data['OS_type']
+            sayInputData(vm_name,os_type)
+            #form.cleaned_data process
+            # ...
+            #return HttpResponseRedirect('/complete_deploy/')
+            return render(request, 'portal/complete_deploy.html', {'vm_name':vm_name,'os_type':os_type})
+    else:
+        form = forms.deployVmForm()
+
+    return render(request, 'portal/deploy.html', {'form':form,})
     
+
+@login_required
+def completeDeploy(request):
+    return render(request, 'portal/complete_deploy.html')
     
 @login_required
 def mypage(request):

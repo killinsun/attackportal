@@ -1,0 +1,10 @@
+{% extends "portal/base.html" %}
+{% block body %}
+
+	<form action="/deploy/" method="POST">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="DEPLOY">
+	</form>
+
+{% endblock %}

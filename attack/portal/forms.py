@@ -1,20 +1,25 @@
 from django import forms
 
-class LoginForm(forms.Form):
+os_lists = (
+    (1,'CentOS 7'),
+    (2,'CentOS 6'),
+    (3,'Ubuntu 17'),
+    (4,'WindowsServer2012'),
+    (5,'WindowsServer2008'),
+    (6,'WindowsServer2003'),
+)
 
-    employeeNumber = forms.CharField(
-        label='Employee Number',
-        max_length=8,
+
+class deployVmForm(forms.Form):
+    VM_name = forms.CharField(
+        label='VirtualMachine Name',
+        max_length=32,
         required=True,
         widget=forms.TextInput()
     )
 
-    inputPassword = forms.CharField(
-        label='Your Password',
-        max_length=256,
-        min_length=6,
-        required=True,
-        widget=forms.PasswordInput()
+    OS_type = forms.ChoiceField(
+        label='OS Type',
+        widget=forms.Select,
+        choices=os_lists
     )
-
-
