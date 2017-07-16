@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http  import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from . import forms
-from portal.lib.test_module import sayInputData
+from portal.lib.manage_esxi import *
 
 
 def mainpage(request):
@@ -35,7 +35,7 @@ def deploy(request):
         if form.is_valid():
             vm_name = form.cleaned_data['VM_name']
             os_type = form.cleaned_data['OS_type']
-            sayInputData(vm_name,os_type)
+            connect_test(vm_name,os_type)
             #form.cleaned_data process
             # ...
             #return HttpResponseRedirect('/complete_deploy/')
