@@ -1,0 +1,508 @@
+ yum -y install wget vim git
+ yum -y groupinstall "Development tools"
+ yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel
+ yum -y install https://centos7.iuscommunity.org/ius-release.rpm
+ yum -y search python36
+ yum -y info python36
+ yum -y info python36u
+ yum install -y python36u python36u-libs python36u-devel python36u-pip
+ python -V
+ python3 -V
+ ln -s /bin/python3.6 /bin/python3
+ ln -s /bin/pip3.6 /bin/pip
+ python3 -V
+ yum install httpd httpd-devel mod_wsgi
+ vim /etc/httpd/conf.d/python.conf
+ vim /var/www/cgi-bin/hello.py
+ systemctl restart httpd
+ pip install virtualenv
+ ls
+ mkdir myenv
+ virtualenv myenv
+ ls
+ cd /var/www
+ ls
+ cd cgi-bin
+ ls
+ mkdir myenv
+ virtualenv myenv
+ myenv/bin/activate
+ source myenv/bin/activate
+ pip install django
+ pip list
+ django-admin startproject attack
+ ls
+ cd attack/
+ ls
+ cd ..
+ git clone https://github.com/killinsun/attackportal.git
+ ls
+ cd attack
+ ls
+ cd attack/
+ ls
+ cd ..
+ ls
+ cd ..
+ ls
+ cd attackportal/
+ ls
+ cd attack/
+ ls
+ mv portal/ ../../attack/
+ ls
+ cd ..
+ ls
+ cd ..
+ ls
+ cd attack
+ ls
+ cd portal/
+ ls
+ cd ..
+ ls
+ cd attack/
+ ls
+ cd ..
+ ls
+ cd ..
+ ls
+ cd attackportal/attack/attack_portal/
+ ls
+ cp settings.py urls.py ../../../attack/attack/
+ cd ../../../attack/attack/
+ ls
+ vim settings.py
+ vim wsgi.py
+ vim urls.py
+ cd ..
+ ls
+ cd ..
+ ls
+ vim /etc/httpd/conf.d/python.conf
+ ls /var/www/cgi-bin/attack/attack/
+ ls
+ vim attack/attack/wsgi.py
+ systemctl restart httpd
+ ls
+ tail -f /var/log/httpd/error_log
+ ls
+ ls /var/www/cgi-bin/myenv/lib/python3.6/site-packages/
+ vim /var/www/cgi-bin/attack/attack/wsgi.py
+ systemctl restart httpd
+ tail -f /var/log/httpd/error_log
+ vim /var/www/cgi-bin/attack/attack/wsgi.py
+ cat /var/www/cgi-bin/attack/attack/wsgi.py
+ ls /var/www/cgi-bin/myenv/lib/python3.6/site-packages/
+ whereis python3
+ vim /var/www/cgi-bin/attack/attack/wsgi.py
+ tail -f /var/log/httpd/error_log
+ ls
+ vim attack/attack/wsgi.py
+ systemctl restart httpd
+ tail -f /var/log/httpd/error_log
+ vim attack/attack/wsgi.py
+ ls /var/www/cgi-bin/attack/attack/
+ vim attack/attack/wsgi.py
+ systemctl restart httpd
+ tail -f /var/log/httpd/error_log
+ vim attack/attack/wsgi.py
+ ls /var/www/cgi-bin/myenv/bin/activate
+ vim attack/attack/wsgi.py
+ systemctl restart httpd
+ tail -f /var/log/httpd/error_log
+ vim attack/attack/wsgi.py
+ tail -f /var/log/httpd/error_log
+ vim /var/www/cgi-bin/attack/attack/wsgi.py
+ vim /etc/httpd/conf.d/python.conf
+ vim /etc/httpd/modules/mod_wsgi.so
+ yum -y remove mod_wsgi
+ pip install mod_wsgi
+ ls /var/www/cgi-bin/myenv/lib/python3.6/site-packages/mod_wsgi/
+ ls /var/www/cgi-bin/myenv/lib/python3.6/site-packages/mod_wsgi/server/mod_wsgi-py36.cpython-36m-x86_64-linux-gnu.so
+ vim /etc/httpd/conf.d/python.conf
+ systemctl restart httpd
+ tail -f /var/log/httpd/error_log
+ vim /var/www/cgi-bin/attack/attack/wsgi.py
+ tail -f /var/log/httpd/error_log
+ pip install bootstrapform
+ pip install bootstrap
+ pip install django-bootstrap-form==3.2.1
+ ls
+ vim attack/attack/settings.py
+ tail -f /var/log/httpd/error_log
+ vim attack/attack/settings.py
+ tail -f /var/log/httpd/error_log
+ ls
+ cd attack/attack/
+ ls
+ cd ..
+ ls
+ cd ..
+ ls
+ cd attack
+ ls
+ cd attack/
+ ls
+ vim urls.py
+ setterm
+ q
+ ls
+ vim settings.py
+ ls
+ cd ..
+ ls
+ cd portal/
+ ls
+ vim urls.py
+ vim models.py
+ ls
+ cd ..
+ ls
+ vim attack/settings.py
+ ls
+ vim attack/urls.py
+ ls
+ cd portal/
+ ls
+ vim __init__.py
+ vim deploy_forms.py
+ vim urls.py
+ cd ..
+ ls
+ cd ..
+ ls
+ cd attackportal/
+ ls
+ cd attack/
+ ls
+ cd ../
+ ls
+ cd ../
+ ls
+ cd attack/
+ ls
+ exit
+ ls
+ rm -rf myenv/
+ ls
+ cd /var/www/cgi-bin/
+ ls
+ rm -rf ./*
+ ls
+ history | git
+ ls
+ rm -rf myenv/
+ ls
+ cd /var/www/cgi-bin/
+ ls
+ rm -rf ./*
+ ls
+ history | git
+ history | grep git
+ git clone https://github.com/killinsun/attackportal.git
+ ls
+ cd attackportal/
+ ls
+ cd attack/
+ ls
+ cd ..
+ mv attack/ ../
+ ls
+ cd ..
+ ls
+ rm -rf attackportal/
+ ls
+ cd attack/
+ ls
+ python
+ ls
+ mkdir testenv
+ python3 -m venv testenv/
+ ls
+ source testenv/bin/activate
+ pip install django==1.11
+ pip install pexpect==4.2.1
+ pip install configperser==3.5.0
+ pip install configparser==3.5.0
+ pip install django-bootstrap-form
+ pip install mod_wsgi
+ ls
+ attack_portal/
+ ls
+ cd attack_portal/
+ ls
+ vim wsgi.py
+ vim /etc/httpd/conf.d/python.conf
+ ls /var/www/cgi-bin/attack/testenv/lib/python3.6/site-packages/
+ vim /etc/httpd/conf.d/python.conf
+ ls /var/www/cgi-bin/attack/testenv/lib/python3.6/site-packages/mod_wsgi/server/mod_wsgi-py36.cpython-36m-x86_64-linux-gnu.so
+ vim /etc/httpd/conf.d/python.conf
+ ls /var/www/cgi-bin/
+ ls /var/www/cgi-bin/attack/
+ ls
+ vim /etc/httpd/conf.d/python.conf
+ ls
+ systemctl restart httpd
+ tail -f /var/log/httpd/error_log
+ ls
+ vim wsgi.py
+ python -V
+ python ../manage.py migrate
+ python ../manage.py runserver
+ python ../manage.py runserver
+ vim wsgi.py
+ ls
+ cd ..
+ ls
+ pwd
+ vim attack_portal/wsgi.py
+ ls
+ vim attack_portal/wsgi.py
+ systemctl restart httpd
+ tail -f /var/log/httpd/error_log
+ ls
+ vim attack_portal/settings.py
+ tail -f /var/log/httpd/error_log
+ vim attack_portal/settings.py
+ tail -f /var/log/httpd/error_log
+ ls
+ rm -rf db.sqlite3
+ history | grep migrate
+ python manage.py migrate
+ ls
+ ll
+ python manage.py createsuperuser
+ ls
+ vim portal/templates/portal/base.html
+ vim portal/views.py
+ vim portal/urls.py
+ vim portal/templates/portal/base.html
+ ls
+ cd attack_portal/
+ ls
+ vim settings.py
+ ls
+ cd ..
+ ls
+ cd portal/
+ ls
+ cd static/
+ ls
+ cd ..
+ ls -lh
+ ls
+ cd resources/
+ ls
+ cd ..
+ ls
+ vim urls.py
+ cd ..
+ vim attack_portal/settings.py
+ ls
+ python manage.py collectstatic
+ ls
+ python manage.py collectstatic
+ ls
+ vim attack_portal/settings.py
+ python manage.py collectstatic
+ vim attack_portal/settings.py
+ mkdir static
+ python manage.py collectstatic
+ ls
+ cd portal/
+ ls
+ cd static/
+ ls
+ cp ./* ../../static/
+ cp -R ./* ../../static/
+ ls
+ cd ..
+ python manage.py collectstatic
+ tree .
+ ls
+ vim attack_portal/settings.py
+ python manage.py collectstatic
+ vim attack_portal/settings.py
+ python manage.py collectstatic
+ ls
+ vim attack_portal/settings.py
+ tail -f /var/log/httpd/error_log
+ vim attack_portal/settings.py
+ systemctl restart httpd
+ tail -f /var/log/httpd/error_log
+ ls
+ cd static/css
+ ls
+ cd ..
+ ls
+ cd ..
+ ls
+ vim attack_portal/settings.py
+ lls
+ ll
+ chmod +w db.sqlite3
+ ls
+ ll
+ vim attack_portal/settings.py
+ mkdir db.sqlite3
+ mkdir db
+ mv db.sqlite3 db/
+ ls
+ ll
+ ls
+ vim attack_portal/settings.py
+ ls
+ kk
+ ll
+ chmod 777 db/
+ ll
+ ls
+ vim attack_portal/settings.py
+ systemctl restart httpd
+ vim attack_portal/settings.py
+ ls
+ cd db
+ ls
+ ll
+ chmod 777 db.sqlite3
+ cd ..
+ ls
+ vim attack_portal/settings.py
+ tail -f /var/log/httpd/error_log
+ history
+ ls
+ vim /etc/httpd/conf.d/python.conf
+ ls /var/www/cgi-bin/attack/
+ vim /etc/httpd/conf.d/python.conf
+ systemctl restart httpd
+ ls
+ cd /var/www/cgi-bin/
+ ls
+ cd attack/
+ ls
+ cd db/
+ ls
+ ll
+ chmod 766 db.sqlite3
+ ls
+ cd ..
+ ls
+ ll
+ chown -R apache db/
+ ll
+ ls
+ cd myvenv/bin/activate
+ source myvenv/bin/activate
+ ls
+ vim attack_portal/wsgi.py
+ systemctl restart httpd
+ history | grep activate
+ tail -f /var/log/httpd/error_log
+ ls
+ vim attack_portal/urls.py
+ ls
+ vim /etc/httpd/conf.d/python.conf
+ systemctl restart httpd
+ tail -f /var/log/httpd/error_log
+ systemctl status httpd
+ ls
+ vim attack_portal/wsgi.py
+ ls /var/www/cgi-bin/attack/testenv/lib/python3.6/site-packages/
+ ls
+ journalctl -xe
+ pip -V
+ pip3.6 -V
+ pip install mod_wsgi
+ ls /var/www/cgi-bin/attack/testenv/lib/python3.6/site-packages/
+ ls /var/www/cgi-bin/attack/myenv/lib/python3.6/site-packages/
+ ls /var/www/cgi-bin/attack/myvenv/lib/python3.6/site-packages/
+ pip
+ pip freeze
+ exit
+ ls
+ vim /etc/httpd/conf.d/python.conf
+ cd /var/www/cgi-bin/
+ ls
+ cd attack/
+ ll
+ vim attack_portal/wsgi.py
+ source testenv/bin/activate
+ ls
+ systemctl restart httpd
+ tail -f /var/log/httpd/error_log
+ systemctl restart httpd
+ ls
+ python manage.py syncdb
+ python manage.py migrate
+ python manage.py runserver
+ ll
+ vim attack_portal/settings.py
+ vim /etc/httpd/conf.d/python.conf
+ ls
+ ll
+ cd db
+ ls
+ ll
+ chmod 777 db.sqlite3
+ rm -rf db.sqlite3
+ ls
+ cd ..
+ ls
+ ll
+ ls
+ python manage.py migrate
+ ll
+ cd db
+ ls
+ ll
+ ls
+ cd ..
+ python manage.py createsuperuser
+ ll
+ cd db
+ ls
+ ll
+ chmod 777 db.sqlite3
+ cd ..
+ ls
+ chown ${USER}.www-data db/db.sqlite3
+ ll
+ ls
+ cd db
+ lll
+ ll
+ chown apache
+ chown apache db.sqlite3
+ ll
+ getenforce
+ setenforce 0
+ tail -f /var/log/audit/audit.log
+ grep type=AVC /var/log/audit/audit.log | grep secure > /tmp/audit.log
+ audit2allow
+ audit2allow -M securelocal -i /tmp/audit.log
+ ll
+ cat /tmp/audit.log
+ grep type=AVC /var/log/audit/audit.log > /tmp/audit.log
+ cat /tmp/audit.log
+ audit2allow -M securelocal -i /tmp/audit.log
+ ll
+ semodule -i securelocal.pp
+ semodule -l | grep secure
+ vim securelocal.te
+ mkdir /usr/share/selinux/devel
+ mv securelocal.* /usr/share/selinux/devel/
+ ll
+ getenforce
+ setenforce 1
+ getenforce
+ tail -f /var/log/httpd/access_log
+ ls
+ vim /var/www/cgi-bin/attack/attack_portal/wsgi.py
+ vim /var/www/cgi-bin/attack/attack_portal/settings.py
+ history
+ history | cut -f6 -d " "
+ history | cut -f6- -d " "
+ history | cut -f6- history|awk '{ $1=""; print $0 }'|less-d " "
+ history|awk '{ $1=""; print $0 }'|less
+ history|awk '{ $1=""; print $0 }' > /tmp/log.txt
